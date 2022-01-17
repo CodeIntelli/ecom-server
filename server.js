@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-import { APP_PORT } from "./config";
+import { PORT } from "./config";
 import { productRoutes, orderRoutes, userRoutes } from "./routes";
 import "./database";
 import cors from "cors";
@@ -23,7 +23,7 @@ process.on("uncaughtException", (err) => {
   process.exit(1);
 });
 
-let server = app.listen(APP_PORT, () => {
+let server = app.listen(PORT, () => {
   console.log("Server Connected");
 });
 
